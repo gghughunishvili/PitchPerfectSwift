@@ -26,12 +26,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         print("View did loaded")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
     @IBAction func recordAudio(_ sender: AnyObject) {
         print("record started")
         audioState(recordHasStarted: true, message: "Recording in progress!")
@@ -54,6 +48,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         self.audioRecorder.record()
         
     }
+    
     @IBAction func stopRecording(_ sender: AnyObject) {
         print("record ended")
         audioState(recordHasStarted: false, message: "Tap to record")
@@ -66,7 +61,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         print("Did finish recording")
         if flag{
             print("Correctly finished")
-            self.performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+            performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         }else{
             showAlert(title: "Error", message: "Something went wrong during saving")
         }

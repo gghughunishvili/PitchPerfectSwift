@@ -67,11 +67,6 @@ class PlaySoundsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         configureUI(playState: .NotPlaying)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func scaleButtons( buttonsArray: Array<UIButton> ) {
         for btn in buttonsArray {
