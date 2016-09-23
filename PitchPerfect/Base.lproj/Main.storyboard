@@ -19,6 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsQ-F7-UaE">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYl-Da-wWz">
                                 <state key="normal" image="recordButtonIcon">
                                     <color key="titleColor" red="1" green="0.1957889028" blue="0.39026668339999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -27,11 +32,6 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="haF-gD-9k3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsQ-F7-UaE">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnQ-4C-Fwd">
                                 <state key="normal" image="stopRecordIcon">
                                     <color key="titleColor" red="1" green="0.97622686056996866" blue="0.84387987276646714" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,12 +43,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YYl-Da-wWz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="38z-ue-U4q"/>
-                            <constraint firstItem="YYl-Da-wWz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6AB-fE-aNt"/>
-                            <constraint firstItem="RnQ-4C-Fwd" firstAttribute="centerX" secondItem="LsQ-F7-UaE" secondAttribute="centerX" id="Vru-ar-y9T"/>
-                            <constraint firstItem="LsQ-F7-UaE" firstAttribute="top" secondItem="YYl-Da-wWz" secondAttribute="bottom" constant="21" id="hyt-hh-rnT"/>
-                            <constraint firstItem="RnQ-4C-Fwd" firstAttribute="top" secondItem="LsQ-F7-UaE" secondAttribute="bottom" constant="22" id="zJi-ES-Bsp"/>
-                            <constraint firstItem="LsQ-F7-UaE" firstAttribute="centerX" secondItem="YYl-Da-wWz" secondAttribute="centerX" id="zVp-hM-3KT"/>
+                            <constraint firstItem="LsQ-F7-UaE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Xe-Np-T8E"/>
+                            <constraint firstItem="RnQ-4C-Fwd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="34i-fh-iOX"/>
+                            <constraint firstItem="YYl-Da-wWz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Aqa-FB-qVh"/>
+                            <constraint firstItem="LsQ-F7-UaE" firstAttribute="top" secondItem="YYl-Da-wWz" secondAttribute="bottom" constant="8" id="OAX-SU-Tao"/>
+                            <constraint firstItem="RnQ-4C-Fwd" firstAttribute="top" secondItem="LsQ-F7-UaE" secondAttribute="bottom" constant="32.5" id="iIB-oJ-TYq"/>
+                            <constraint firstItem="LsQ-F7-UaE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zhd-yr-I0n"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zOp-QG-27k"/>
@@ -143,6 +143,8 @@
                             <constraint firstItem="s9h-Ct-Fdo" firstAttribute="centerY" secondItem="xeP-1g-Qqx" secondAttribute="centerY" id="EzC-5a-rjQ"/>
                             <constraint firstItem="s9h-Ct-Fdo" firstAttribute="centerX" secondItem="xeP-1g-Qqx" secondAttribute="centerX" id="Fs2-Hf-Erh"/>
                             <constraint firstItem="s9h-Ct-Fdo" firstAttribute="top" secondItem="eee-Vy-mqy" secondAttribute="bottom" id="NYF-PG-HP5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KVg-PC-jIv" secondAttribute="trailing" id="ZFC-4D-eSf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XOB-Ec-hMG" secondAttribute="trailing" id="dmn-o5-K5H"/>
                             <constraint firstItem="s9h-Ct-Fdo" firstAttribute="leading" secondItem="xeP-1g-Qqx" secondAttribute="leadingMargin" id="k12-cy-0ju"/>
                         </constraints>
                     </view>

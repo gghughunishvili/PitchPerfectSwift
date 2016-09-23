@@ -26,23 +26,23 @@ class PlaySoundsViewController: UIViewController {
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: Timer!
     
-    enum ButtonType: Int { case Slow=0, Fast, Chipmunk, Vader, Echo, Reverb  }
+    enum ButtonType: Int { case slow=0, fast, chipmunk, vader, echo, reverb  }
     
     @IBAction func playSound(forButton sender: UIButton){
         print("play sound for button \(sender.tag)" )
         stopAudio()
         switch ButtonType(rawValue: sender.tag)! {
-        case .Slow:
+        case .slow:
             playSound(rate: 0.5)
-        case .Fast:
+        case .fast:
             playSound(rate: 1.5)
-        case .Chipmunk:
+        case .chipmunk:
             playSound(pitch: 1500)
-        case .Vader:
+        case .vader:
             playSound(pitch: -1200)
-        case .Echo:
+        case .echo:
             playSound(echo: true)
-        case .Reverb:
+        case .reverb:
             playSound(reverb: true)
         }
         
@@ -60,6 +60,8 @@ class PlaySoundsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupAudio()
+        scaleButtons(buttonsArray: [snailButton, chipmunkButton, rabbitButton, vaderButton, echoButton, reverbButton, stopButton])
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,15 +73,10 @@ class PlaySoundsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func scaleButtons( buttonsArray: Array<UIButton> ) {
+        for btn in buttonsArray {
+            btn.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        }
     }
-    */
 
 }
