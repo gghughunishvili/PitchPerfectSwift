@@ -27,9 +27,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(_ sender: AnyObject) {
-        print("record started")
-        audioState(recordHasStarted: true, message: "Recording in progress!")
-        
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
@@ -41,11 +38,18 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
         
         try! self.audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
-        
-        self.audioRecorder.delegate = self
-        self.audioRecorder.isMeteringEnabled = true
-        self.audioRecorder.prepareToRecord()
-        self.audioRecorder.record()
+        session.requestRecordPermission({(granted: Bool)-> Void in
+            if granted {
+                print("recording started")
+                self.audioState(recordHasStarted: true, message: "Recording in progress!")
+                self.audioRecorder.delegate = self
+                self.audioRecorder.isMeteringEnabled = true
+                self.audioRecorder.prepareToRecord()
+                self.audioRecorder.record()
+            }else{
+                self.showAlert(title: "No permission", message: "Microphone usage permission should be allowed!")
+            }
+        })
         
     }
     

@@ -199,6 +199,7 @@
 				TargetAttributes = {
 					46DECE2A1D927C5D00B4E866 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = T5GD9C4K72;
 						ProvisioningStyle = Automatic;
 					};
 					46DECE3E1D927C5D00B4E866 = {
@@ -420,9 +421,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T5GD9C4K72;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ggcw.PitchPerfect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gghughunishvili.PitchPerfect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -432,9 +435,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T5GD9C4K72;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ggcw.PitchPerfect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gghughunishvili.PitchPerfect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
